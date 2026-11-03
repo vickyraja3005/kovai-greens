@@ -50,7 +50,7 @@ export class HomePage extends CommonPage {
         await expect(this.profileIcon).toBeVisible()
     }
 
-    // VERIFY THE HOME PAGE ELEMENTS
+    // HOME PAGE TITLE ELEMTENTS VALIDATIONS
     async verifyHomePageElements() {
         await expect(this.topHeadingTitle).toBeVisible()
         await expect(this.todaysOrder).toBeVisible()
