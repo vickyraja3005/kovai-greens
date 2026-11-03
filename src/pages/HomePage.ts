@@ -16,6 +16,10 @@ export class HomePage extends CommonPage {
     farmPrioritiesTitle : Locator
     upcommingDeliveriesTitle: Locator
     growingOnYourFarm : Locator
+    todaysReceipts : Locator
+    lowStockVarieities : Locator
+    schoolDeliveriesThisWeek : Locator
+    recurringDeliveriesThisWeek : Locator
 
     // RECEIVING THE PAGE PARAMETER FROM HOMEPAGE.SPEC FILE AND STRORING IT INTO THE THIS.PAGE VARIABLE
     constructor(page: Page) {
@@ -31,6 +35,11 @@ export class HomePage extends CommonPage {
         this.farmPrioritiesTitle = page.getByTestId("dashboard-farm-priorities-h2")
         this.upcommingDeliveriesTitle = page.getByTestId('dashboard-upcoming-deliveries-h2')
         this.growingOnYourFarm = page.getByTestId("dashboard-growing-on-your-farm-h2")
+        this.todaysReceipts = page.getByTestId('dashboard-operating-strip-div')
+        this.lowStockVarieities = page.getByTestId('dashboard-span-3-Low-stock varieties')
+        this.schoolDeliveriesThisWeek = page.getByTestId('dashboard-span-3-School deliveries this week')
+        this.recurringDeliveriesThisWeek = page.getByTestId('dashboard-span-3-Recurring deliveries this week')
+
     }
 
     async verifyProfileIcon() {
@@ -50,6 +59,10 @@ export class HomePage extends CommonPage {
         await expect(this.farmPrioritiesTitle).toBeVisible()
         await expect(this.upcommingDeliveriesTitle).toBeVisible()
         await expect(this.growingOnYourFarm).toBeVisible()
+        await expect(this.todaysReceipts).toBeVisible()
+        await expect(this.lowStockVarieities).toBeVisible()
+        await expect(this.schoolDeliveriesThisWeek).toBeVisible()
+        await expect(this.recurringDeliveriesThisWeek).toBeVisible()
     }
 
     // HOME PAGE TABLE HEADER VALIDATIONS
