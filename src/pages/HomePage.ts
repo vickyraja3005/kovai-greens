@@ -20,6 +20,7 @@ export class HomePage extends CommonPage {
     lowStockVarieities : Locator
     schoolDeliveriesThisWeek : Locator
     recurringDeliveriesThisWeek : Locator
+    footerText : Locator
 
     // RECEIVING THE PAGE PARAMETER FROM HOMEPAGE.SPEC FILE AND STRORING IT INTO THE THIS.PAGE VARIABLE
     constructor(page: Page) {
@@ -39,6 +40,7 @@ export class HomePage extends CommonPage {
         this.lowStockVarieities = page.getByTestId('dashboard-span-3-Low-stock varieties')
         this.schoolDeliveriesThisWeek = page.getByTestId('dashboard-span-3-School deliveries this week')
         this.recurringDeliveriesThisWeek = page.getByTestId('dashboard-span-3-Recurring deliveries this week')
+        this.footerText = page.getByTestId('app-page-footer-footer')
 
     }
 
@@ -63,6 +65,7 @@ export class HomePage extends CommonPage {
         await expect(this.lowStockVarieities).toBeVisible()
         await expect(this.schoolDeliveriesThisWeek).toBeVisible()
         await expect(this.recurringDeliveriesThisWeek).toBeVisible()
+        await expect(this.footerText).toBeVisible()
     }
 
     // HOME PAGE TABLE HEADER VALIDATIONS
