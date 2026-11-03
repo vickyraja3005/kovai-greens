@@ -42,8 +42,8 @@ export class HomePage extends CommonPage {
 
     }
 
+    // YOUR ACCOUNT MODAL POPUP VALIDATIONS
     async verifyProfileIcon() {
-        // YOUR ACCOUNT MODAL POPUP VALIDATIONS
         await this.profileIcon.waitFor({ state: 'visible' })
         await expect(this.profileIcon).toBeVisible()
     }
