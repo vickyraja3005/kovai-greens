@@ -41,7 +41,6 @@ export class HomePage extends CommonPage {
         this.schoolDeliveriesThisWeek = page.getByTestId('dashboard-span-3-School deliveries this week')
         this.recurringDeliveriesThisWeek = page.getByTestId('dashboard-span-3-Recurring deliveries this week')
         this.footerText = page.getByTestId('app-page-footer-footer')
-
     }
 
     // YOUR ACCOUNT MODAL POPUP VALIDATIONS
