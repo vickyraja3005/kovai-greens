@@ -44,7 +44,7 @@ export class GrowingBatches extends CommonPage {
         const count = await this.getRecordsCount()
 
         for (let i = 0; i < Number(count); i++) {
-            await this.page.locator(`[row-index="${i}"] [col-id="7"]`).scrollIntoViewIfNeeded()
+            // await this.page.locator(`[row-index="${i}"] [col-id="7"]`).scrollIntoViewIfNeeded()
             const grabbedValues = await this.page.locator(`[row-index="${i}"] [col-id="7"]`).getByText(tableStatusValue).innerText()
             await expect(grabbedValues).toBe(tableStatusValue)
         }
