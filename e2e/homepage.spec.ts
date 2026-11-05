@@ -2,7 +2,7 @@ import { HomePage } from '../src/pages/homePage'
 import { upcommingDeliveriesTableHeader } from "../src/constants/constants"
 import { test } from "../src/config/fixtures"
 
-// npx playwright test tests/login.spec.ts --project=chromium --headed
+// npx playwright test e2e --project=chromium --headed
 test.describe('Home Page Validations', async () => {
 
     let homePage: HomePage

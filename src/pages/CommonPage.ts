@@ -19,4 +19,14 @@ export class CommonPage {
         await this.page.waitForURL(expectedURL)
         await expect(this.page).toHaveURL(expectedURL)
     }
+
+    async generateProductName() {
+        const timestamp = Date.now();
+        return `TestProduct_${timestamp}`;
+    }
+
+    async generateVarietyName() {
+        const timestamp = Date.now();
+        return `TestVariety_${timestamp}`;
+    }
 }

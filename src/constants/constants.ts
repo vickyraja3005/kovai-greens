@@ -22,6 +22,10 @@ export const sideBarMenuItems = {
     customers: {
         locator: 'app-span-2-customers-BUSINESS',
         expectedURL: 'https://kovai-greens.vercel.app/customers'
+    },
+    products: {
+        locator: 'app-span-2-products-FARM OPERATIONS',
+        expectedURL: 'https://kovai-greens.vercel.app/products'
     }
 }
 
@@ -62,8 +66,18 @@ export const enum newCustomerData {
     email = 'ramesh.kumar@example.com',
     billingAddress = '12 Anna Salai',
     deliveryAddress = '25 T Nagar Main Road',
-    area = 'T Nagar',
+    area = 'Allampatti',
     pincode = '600017',
     paymentTerms = '30',
     notes = 'New customer created for testing'
+}
+
+// PRODUCT PAGE NEW PRODUCT TEST DATA
+export const enum newProduct {
+    productDescription = 'Testing Description',
+    productSellingPrice = '100',
+    productLowStockAlert = '5',
+    productStorageInstruction = 'Testing instructions',
+    productPriceOne='99',
+    productPriceTwo='199'
 }
