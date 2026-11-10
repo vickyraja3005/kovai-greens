@@ -22,11 +22,11 @@ export class CommonPage {
 
     async generateProductName() {
         const timestamp = Date.now();
-        return `test_product_${timestamp}`;
+        return `test_product_${timestamp}`
     }
 
     async generateVarietyName() {
         const timestamp = Date.now();
-        return `test_variety_${timestamp}`;
+        return `test_variety_${timestamp}`
     }
 }
